@@ -1,0 +1,9 @@
+{
+	"user": "kristoisberg",
+	"repo": "samp-td-string-width",
+	"entry": "test.pwn",
+	"output": "test.amx",
+	"dependencies": [
+		"sampctl/samp-stdlib"
+	]
+}
