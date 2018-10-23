@@ -1,4 +1,4 @@
-# SA-MP TextDraw string width
+# SA-MP TextDraw String Width
 
 [![sampctl](https://shields.southcla.ws/badge/sampctl-samp--td--string--width-2f2f2f.svg?style=for-the-badge)](https://github.com/kristoisberg/samp-td-string-width)
 
