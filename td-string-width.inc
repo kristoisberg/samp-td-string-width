@@ -107,7 +107,7 @@ static const TDFont3CharacterInlineWidth[32] = {
 };
 
 
-stock GetTextDrawCharacterWidth(character, font, outline = 0, bool:proportional = true) {
+stock GetTextDrawCharacterWidth(character, font, bool:proportional = true) {
 	if (!(0 <= font <= 3) || character <= 0) {
 		return 0;
 	}
@@ -119,8 +119,6 @@ stock GetTextDrawCharacterWidth(character, font, outline = 0, bool:proportional 
 	} else {
 		width = TDCharacterWidth[font][character];
 	}
-
-	width += outline;
 
 	return width;
 }
@@ -150,7 +148,7 @@ stock GetTextDrawStringWidth(const string[], font, outline = 0, bool:proportiona
             if (font == 3 && (0 < string[i] < 32) && i != j - 1 && strfind(string, "~n~", .pos = i + 1) != i + 1) {
                 width += TDFont3CharacterInlineWidth[string[i]];
             } else {
-                width += GetTextDrawCharacterWidth(string[i], font, 0, proportional);
+                width += GetTextDrawCharacterWidth(string[i], font, proportional);
             }
         }
     }
