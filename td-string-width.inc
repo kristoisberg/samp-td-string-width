@@ -159,3 +159,28 @@ stock GetTextDrawStringWidth(const string[], font, outline = 0, bool:proportiona
 
     return result + (outline * 2);
 }
+
+
+stock GetTextDrawLineWidth(const string[], font, outline = 0, bool:proportional = true) {
+    new other, width;
+
+    for (new i, j = strlen(string); i < j; i++) {
+        if (string[i] == '~') {
+            other = strfind(string, "~", .pos = i + 1);
+
+            if (other == -1) {
+                return GetTextDrawStringWidth("Error: unmatched tilde", font, outline, proportional);
+            }
+
+            i = other + 1;
+        } else {
+            if (font == 3 && (0 < string[i] < 32) && i != j - 1) {
+                width += TDFont3CharacterInlineWidth[string[i]];
+            } else {
+                width += GetTextDrawCharacterWidth(string[i], font, proportional);
+            }
+        }
+    }
+
+    return width + (outline * 2);
+}

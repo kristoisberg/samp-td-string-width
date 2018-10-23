@@ -23,5 +23,8 @@ main() {
     strcat(temp, "~n~");
     printf("%i", GetTextDrawStringWidth(temp, 3)); // 9
 
+    printf("%i", GetTextDrawLineWidth("!!!", 2));
+    printf("%i", GetTextDrawLineWidth("!!!!!!", 2));
+
     return 1;
 }
