@@ -10,7 +10,7 @@ A few days ago I mentioned the data I had collected and Y_Less sent me a [reposi
 
 Another mistake that all existing functions did was presuming that characters 1-31 are always rendered as regular whitespace. In reality, the widths of the invisible characters differed in font 2 and the characters in font 3 actually have two different widths. One of them is the visual width: most of the characters don't actually render as whitespace, instead of this you see either one or two stripes with varying widths. The other width is the "physical" width, which is either 0 (the stripes overlap with the next character or two) or a relatively large number, up to 255.
 
-Now, after multiple days of work that contained manually reassembling data, manually measuring almost 100 characters and a lot more, this library is ready. What could it be used for? I personally needed this to calculate the width of buttons based on their strings. The previously mentioned repository uses code similar this to achieve full colouring of textdraws. A few more usages can be found from the original topic explaining the concept.
+Now, after multiple days of work that contained manually reassembling data, manually measuring almost 100 characters and a lot more, this library is ready. What could it be used for? I personally needed this to calculate the width of buttons based on their strings. The previously mentioned repository uses code similar to this to achieve full colouring of textdraws. A few more usages can be found from the original topic explaining the concept.
 
 ## Installation
 
