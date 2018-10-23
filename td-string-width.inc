@@ -108,7 +108,7 @@ static const TDFont3CharacterInlineWidth[32] = {
 
 
 stock GetTextDrawCharacterWidth(character, font, bool:proportional = true) {
-	if (!(0 <= font <= 3) || character <= 0) {
+	if (!(0 <= font <= 3) || !(0 <= character < 176)) {
 		return 0;
 	}
 
@@ -132,7 +132,7 @@ stock GetTextDrawStringWidth(const string[], font, outline = 0, bool:proportiona
             other = strfind(string, "~", .pos = i + 1);
 
             if (other == -1) {
-                return GetTextDrawStringWidth("Error: unmatched tilde", font, outline, proportional);
+                return GetTextDrawLineWidth("Error: unmatched tilde", font, outline, proportional);
             }
 
             if (other == i + 2 && string[i + 1] == 'n') {
@@ -169,7 +169,7 @@ stock GetTextDrawLineWidth(const string[], font, outline = 0, bool:proportional 
             other = strfind(string, "~", .pos = i + 1);
 
             if (other == -1) {
-                return GetTextDrawStringWidth("Error: unmatched tilde", font, outline, proportional);
+                return GetTextDrawLineWidth("Error: unmatched tilde", font, outline, proportional);
             }
 
             i = other + 1;
