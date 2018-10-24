@@ -5,5 +5,9 @@
 	"output": "test.amx",
 	"dependencies": [
 		"sampctl/samp-stdlib"
+	],
+	"dev_dependencies": [
+		"Zeex/samp-plugin-crashdetect",
+		"IllidanS4/PawnPlus"
 	]
 }
