@@ -1,6 +1,8 @@
 # SA-MP TextDraw String Width
 
-[![sampctl](https://shields.southcla.ws/badge/sampctl-samp--td--string--width-2f2f2f.svg?style=for-the-badge)](https://github.com/kristoisberg/samp-td-string-width)
+[![sampctl](https://img.shields.io/badge/sampctl-samp--td--string--width-2f2f2f.svg?style=for-the-badge)](https://github.com/kristoisberg/samp-td-string-width)
+
+**Notice:** This repository is not being actively maintained anymore. If anyone wishes to continue the development of the project, please create a fork of the repository and release future versions there.
 
 About two years ago an user called Alcatrik came up with a concept of calculating the width of textdraw strings in [this thread](https://forum.sa-mp.com/showthread.php?t=618883). In those two years a few functions using this concept appeared in that thread, but all of them had major flaws. The first one by Crayder didn't include the first 32 characters of the ASCII table. The next one by Freaksten fixed that flaw, but neither of the functions also didn't take into account that there are four different textdraw fonts and just used the first array in `fonts.dat`.
 
